@@ -54,13 +54,13 @@
     <div class="flex flex-col items-center justify-between gap-4 text-xs text-cream/50 sm:flex-row">
       <p>© {{ currentYear }} The Holy Supper. {{ t.rights }}</p>
 
-      <div class="flex items-center gap-3">
-        <div class="flex flex-col text-right leading-tight font-medium tracking-widest uppercase text-cream/75 text-xs sm:text-sm">
+      <a href="https://www.linkedin.com/in/pier-quartarella-software-developer/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group transition-transform duration-300 hover:scale-105" title="Pierfilippo Quartarella - LinkedIn">
+        <div class="flex flex-col text-right leading-tight font-medium tracking-widest uppercase text-cream/75 group-hover:text-cream text-xs sm:text-sm transition-colors">
           <span>{{ t.createdByPart1 }}</span>
           <span>{{ t.createdByPart2 }}</span>
         </div>
-        <img src="assets/logo-pq.png" alt="Logo PQ" class="h-12 sm:h-14 w-auto shrink-0 opacity-90 transition-opacity hover:opacity-100" />
-      </div>
+        <img src="assets/logo-pq.png" alt="Logo PQ" class="h-12 sm:h-14 w-auto shrink-0 opacity-90 group-hover:opacity-100 transition-opacity" />
+      </a>
 
       <p class="tracking-widest uppercase">{{ t.madeInItaly }}</p>
     </div>
