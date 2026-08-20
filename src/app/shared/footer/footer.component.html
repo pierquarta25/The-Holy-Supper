@@ -54,12 +54,15 @@
     <div class="flex flex-col items-center justify-between gap-4 text-xs text-cream/50 sm:flex-row">
       <p>© {{ currentYear }} The Holy Supper. {{ t.rights }}</p>
 
-      <div class="flex items-center gap-1.5 text-cream/60 transition-colors hover:text-cream">
+      <div class="flex items-center gap-2 text-cream/70 transition-colors hover:text-cream">
         <span>{{ t.createdBy }}</span>
-        <svg viewBox="0 0 100 100" class="h-4 w-4 shrink-0 fill-none stroke-current" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter" aria-label="Logo PQ">
-          <circle cx="46" cy="44" r="33" />
-          <line x1="65" y1="63" x2="84" y2="82" stroke-width="12" stroke-linecap="square" />
-          <path d="M 34,26 V 64 M 34,26 H 49 C 58,26 58,43 49,43 H 34" stroke-width="8" />
+        <svg viewBox="0 0 100 100" class="h-6 w-6 shrink-0 inline-block text-cream/80 hover:text-cream transition-colors" aria-label="Logo PQ">
+          <!-- Outer circle Q -->
+          <circle cx="45" cy="45" r="33" stroke="currentColor" stroke-width="10" fill="none" />
+          <!-- Q Tail -->
+          <line x1="64" y1="64" x2="84" y2="84" stroke="currentColor" stroke-width="14" stroke-linecap="square" />
+          <!-- P Letter inside -->
+          <path d="M 34,25 V 65 M 34,25 H 52 C 62,25 62,45 52,45 H 34" stroke="currentColor" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter" fill="none" />
         </svg>
       </div>
 
