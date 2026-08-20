@@ -1,0 +1,48 @@
+<header class="fixed inset-x-0 top-0 z-50 transition-all duration-500" [ngClass]="isScrolled ? 'py-2' : 'py-4'">
+  <div class="mx-auto flex max-w-7xl items-center justify-between rounded-full px-5 py-3 transition-all duration-500 sm:px-7"
+       [ngClass]="isScrolled ? 'glass shadow-card' : ''"
+       [style.marginInline]="isScrolled ? '1rem' : '1.5rem'">
+    
+    <a [routerLink]="['/', locale]" class="flex items-center gap-2 text-primary" aria-label="The Holy Supper">
+      <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+        <path d="M12 2v20M6 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+      <span class="text-display text-lg tracking-wide">The Holy Supper</span>
+    </a>
+    
+    <nav class="hidden items-center gap-7 md:flex">
+      <a *ngFor="let item of navItems" [href]="item.href" class="text-sm text-cream/80 transition hover:text-primary">
+        {{ item.label }}
+      </a>
+    </nav>
+    
+    <div class="hidden items-center gap-3 md:flex">
+      <app-language-switcher></app-language-switcher>
+      <a [routerLink]="['/', locale, 'contact']"
+         class="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:brightness-110">
+        {{ t.cta }}
+      </a>
+    </div>
+    
+    <div class="flex items-center gap-2 md:hidden">
+      <app-language-switcher [variant]="'mobile'"></app-language-switcher>
+      <button class="rounded-full border border-border p-2 text-primary" (click)="toggleMobileMenu()"
+              [attr.aria-label]="t.menu" [attr.aria-expanded]="open">
+        <lucide-icon *ngIf="open" [img]="icons.X" class="h-5 w-5"></lucide-icon>
+        <lucide-icon *ngIf="!open" [img]="icons.Menu" class="h-5 w-5"></lucide-icon>
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="open" class="mx-6 mt-2 rounded-2xl glass p-6 md:hidden">
+    <div class="flex flex-col gap-4">
+      <a *ngFor="let item of navItems" [href]="item.href" (click)="open = false" class="text-base text-cream/90">
+        {{ item.label }}
+      </a>
+      <a [routerLink]="['/', locale, 'contact']" (click)="open = false"
+         class="mt-2 rounded-full bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground">
+        {{ t.cta }}
+      </a>
+    </div>
+  </div>
+</header>

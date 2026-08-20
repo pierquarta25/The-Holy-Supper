@@ -1,0 +1,148 @@
+.gluten-free-page {
+  min-height: 80vh;
+}
+
+.hero-gf {
+  padding: 6rem 0 4rem;
+}
+
+.hero-gf h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-gf .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.features-section {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--peach);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.content-section {
+  padding: 5rem 0;
+  background: color-mix(in oklab, var(--wine-900) 40%, transparent);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.content-container {
+  max-width: 800px;
+}
+
+.content-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--peach);
+}
+
+.content-container p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.gf-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.gf-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.gf-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--peach);
+  font-weight: bold;
+}
+
+.faq-gf {
+  padding: 5rem 0;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-details {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+
+.faq-details summary {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.faq-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-details summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  color: var(--peach);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.faq-details[open] summary::after {
+  content: '−';
+}
+
+.faq-details p {
+  margin-top: 1rem;
+  opacity: 0.9;
+  padding-right: 2rem;
+}
+
+.final-cta {
+  padding: 6rem 0;
+}
+
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-4 { margin-top: 1.5rem; }
+.text-center { text-align: center; }
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-gf h1 {
+    font-size: 2.5rem;
+  }
+}

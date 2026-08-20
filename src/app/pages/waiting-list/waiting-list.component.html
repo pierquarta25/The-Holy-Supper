@@ -1,0 +1,87 @@
+<div class="waiting-page container">
+  <div class="waiting-card card glass">
+    
+    <div class="text-center header-section" *ngIf="!isSuccess">
+      <span class="eyebrow">{{ t.eyebrow }}</span>
+      <h1>{{ t.title }}</h1>
+      <p class="lead">{{ t.intro }}</p>
+    </div>
+
+    <div *ngIf="isSuccess" class="success-state text-center">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--peach)" stroke-width="2" class="mb-4">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <h3>{{ t.successTitle }}</h3>
+      <p>{{ t.successBody }}</p>
+      <a [routerLink]="['/', locale]" class="btn-primary mt-4">{{ t.backHome }}</a>
+    </div>
+
+    <form *ngIf="!isSuccess" [formGroup]="waitingForm" (ngSubmit)="onSubmit()" class="waiting-form">
+      <span class="error-message" *ngIf="errorMessage">{{ errorMessage }}</span>
+
+      <div class="form-group">
+        <label>{{ t.fields.name }}</label>
+        <input type="text" formControlName="name" class="form-control">
+        <span class="error-message mt-1" *ngIf="waitingForm.get('name')?.touched && waitingForm.get('name')?.invalid">
+          {{ t.errors.name }}
+        </span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{ t.fields.church }}</label>
+          <input type="text" formControlName="churchName" class="form-control">
+          <span class="error-message mt-1" *ngIf="waitingForm.get('churchName')?.touched && waitingForm.get('churchName')?.invalid">
+            {{ t.errors.church }}
+          </span>
+        </div>
+        <div class="form-group">
+          <label>{{ t.fields.role }}</label>
+          <input type="text" formControlName="role" class="form-control" [placeholder]="t.placeholders.role">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{ t.fields.email }}</label>
+          <input type="email" formControlName="email" class="form-control">
+          <span class="error-message mt-1" *ngIf="waitingForm.get('email')?.touched && waitingForm.get('email')?.invalid">
+            {{ t.errors.email }}
+          </span>
+        </div>
+        <div class="form-group">
+          <label>{{ t.fields.phone }}</label>
+          <input type="tel" formControlName="phone" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>{{ t.fields.country }}</label>
+          <input type="text" formControlName="country" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>{{ t.fields.quantity }}</label>
+          <input type="text" formControlName="expectedQuantity" class="form-control" [placeholder]="t.placeholders.quantity">
+        </div>
+      </div>
+
+      <div class="form-group checkbox-group mt-4">
+        <input type="checkbox" formControlName="consent" id="consent">
+        <label for="consent">
+          {{ t.consent }} <a [routerLink]="['/', locale, 'privacy']" target="_blank">{{ t.consentPolicyLink }}</a>
+        </label>
+      </div>
+      <span class="error-message" *ngIf="waitingForm.get('consent')?.touched && waitingForm.get('consent')?.invalid">
+        {{ t.errors.consent }}
+      </span>
+
+      <button type="submit" class="btn-primary w-100 mt-4" [disabled]="isSubmitting">
+        {{ isSubmitting ? t.submitting : t.submit }}
+      </button>
+      
+      <p class="text-center mt-2" style="opacity: 0.7; font-size: 0.85rem;">{{ t.noSpam }}</p>
+    </form>
+  </div>
+</div>

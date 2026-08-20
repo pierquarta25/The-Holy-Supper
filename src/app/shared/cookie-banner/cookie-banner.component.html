@@ -1,0 +1,12 @@
+<div class="cookie-banner" *ngIf="isVisible">
+  <div class="container cookie-content">
+    <p>
+      {{ t.body }} 
+      <a [routerLink]="['/', locale, 'cookies']" class="cookie-link">{{ t.cookiePolicyLink }}</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-secondary" (click)="acceptEssential()">{{ t.essential }}</button>
+      <button class="btn-primary" (click)="acceptAll()">{{ t.accept }}</button>
+    </div>
+  </div>
+</div>

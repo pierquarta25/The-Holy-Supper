@@ -1,0 +1,195 @@
+<main class="grain pt-32 pb-24">
+  <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-5">
+    
+    <!-- Left Column -->
+    <aside class="lg:col-span-2">
+      <p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.eyebrow }}</p>
+      <h1 class="text-display mt-4 text-4xl sm:text-5xl">{{ t.title }}</h1>
+      <p class="mt-5 text-cream/75">{{ t.intro }}</p>
+      
+      <div class="mt-8 space-y-3 text-sm text-cream/75">
+        <a href="mailto:theholysupper@gmail.com" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 4 10 8 10-8"></path></svg>
+          theholysupper&#64;gmail.com
+        </a>
+        <a href="tel:+393913817351" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +39 391 3817351
+        </a>
+      </div>
+
+      <p class="mt-8 rounded-2xl border border-border/60 bg-card/40 p-5 text-sm text-cream/70">
+        {{ t.sampleNote }}
+      </p>
+    </aside>
+
+    <!-- Right Column (Form / Success) -->
+    <div class="rounded-3xl border border-border/60 bg-card/40 p-8 sm:p-10 lg:col-span-3">
+      
+      <!-- Success View -->
+      <div *ngIf="isSuccess" class="flex flex-col items-center justify-center text-center py-12">
+        <span class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/15 text-primary mb-6">
+          <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </span>
+        <h2 class="text-display text-4xl sm:text-5xl mb-4">{{ t.successTitle }}</h2>
+        <p class="text-cream/75 mb-10 max-w-md">{{ t.successBody }}</p>
+        <a [routerLink]="['/', locale]" class="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm text-cream transition hover:border-primary hover:text-primary">
+          {{ t.backHome }}
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <!-- Form View -->
+      <form *ngIf="!isSuccess" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        
+        <div *ngIf="errorMessage" class="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-200">
+          {{ errorMessage }}
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2">
+          
+          <!-- Church Name -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.church }}</span>
+            <input 
+              type="text" 
+              formControlName="churchName"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Country -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.country }}</span>
+            <input 
+              type="text" 
+              formControlName="country"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- First Name -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.firstName }}</span>
+            <input 
+              type="text" 
+              formControlName="firstName"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Last Name -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.lastName }}</span>
+            <input 
+              type="text" 
+              formControlName="lastName"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Email -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.email }}</span>
+            <input 
+              type="email" 
+              formControlName="email"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Phone -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.phone }}</span>
+            <input 
+              type="tel" 
+              formControlName="phone"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Congregation Size -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.congregation }}</span>
+            <input 
+              type="text" 
+              formControlName="congregationSize"
+              [placeholder]="t.placeholders.congregation"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Communion Attendance -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.attendance }}</span>
+            <input 
+              type="text" 
+              formControlName="avgAttendance"
+              [placeholder]="t.placeholders.attendance"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Expected Quantity -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.quantity }}</span>
+            <input 
+              type="text" 
+              formControlName="expectedQuantity"
+              [placeholder]="t.placeholders.quantity"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+          <!-- Preferred Product -->
+          <label class="block">
+            <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.product }}</span>
+            <input 
+              type="text" 
+              formControlName="productInterest"
+              [placeholder]="t.placeholders.product"
+              class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+            />
+          </label>
+
+        </div>
+
+        <!-- Message -->
+        <label class="mt-5 block">
+          <span class="text-xs uppercase tracking-widest text-cream/60">{{ t.fields.message }}</span>
+          <textarea
+            formControlName="message"
+            rows="5"
+            [placeholder]="t.messagePlaceholder"
+            class="mt-2 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-cream outline-none transition placeholder:text-cream/30 focus:border-primary focus:ring-2 focus:ring-primary/30"
+          ></textarea>
+        </label>
+
+        <!-- Checkbox Notify -->
+        <label class="mt-6 flex items-start gap-3 text-sm text-cream/75 cursor-pointer">
+          <input 
+            type="checkbox" 
+            formControlName="notify"
+            class="mt-1 h-4 w-4 rounded accent-[color:var(--peach)]"
+          />
+          <span>{{ t.notify }}</span>
+        </label>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          [disabled]="isSubmitting"
+          class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition hover:brightness-110 disabled:opacity-60 cursor-pointer"
+        >
+          <span>{{ isSubmitting ? t.submitting : t.submit }}</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</main>

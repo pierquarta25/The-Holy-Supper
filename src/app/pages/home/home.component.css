@@ -1,0 +1,261 @@
+/* Stili per la pagina Home */
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.eyebrow {
+  display: inline-block;
+  color: var(--peach);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Hero */
+.hero {
+  padding: 6rem 0 4rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  color: var(--peach);
+  font-weight: 600;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+}
+
+/* Trust Bar */
+.trust-bar {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--wine-900) 50%, transparent);
+}
+
+.trust-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gilt);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Common Section padding */
+.why-section, .benefits-section, .pricing-section, .impact-section, .faq-section, .final-cta {
+  padding: 6rem 0;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+/* Why */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+}
+
+.problem-list li {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.problem-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--peach);
+}
+
+.solution {
+  background: linear-gradient(145deg, var(--wine-800), var(--wine-900));
+}
+
+/* Benefits */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-card h4 {
+  color: var(--peach);
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Pricing */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-table th {
+  font-weight: 600;
+  color: var(--gilt);
+}
+
+.pricing-table .highlight {
+  color: var(--peach);
+  font-weight: bold;
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-question svg {
+  transition: transform 0.3s ease;
+  color: var(--peach);
+}
+
+.faq-question svg.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding-bottom: 1.5rem;
+  color: var(--cream);
+  opacity: 0.9;
+}
+
+/* Impact */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CTA */
+.cta-card {
+  background: linear-gradient(135deg, var(--wine-800), var(--wine-950));
+  border-color: var(--peach);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-container, .why-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}

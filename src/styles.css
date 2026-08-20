@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@source "./app/**/*.html";
+@source "./app/**/*.ts";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   THE HOLY SUPPER — Brand System
+   Palette derived from the brand presentation:
+   deep burgundy background, peach/apricot accents, warm cream text.
+   Display: Fraunces (elegant contemporary serif).
+   Body:    Manrope (clean, premium sans).
+   ============================================================ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-wine-950: var(--wine-950);
+  --color-wine-900: var(--wine-900);
+  --color-wine-800: var(--wine-800);
+  --color-wine-700: var(--wine-700);
+  --color-peach: var(--peach);
+  --color-peach-soft: var(--peach-soft);
+  --color-cream: var(--cream);
+  --color-gilt: var(--gilt);
+
+  --font-display: "Fraunces", "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --shadow-elevated: 0 40px 80px -30px color-mix(in oklab, var(--wine-950) 70%, transparent);
+  --shadow-card: 0 20px 40px -20px color-mix(in oklab, black 40%, transparent);
+  --gradient-wine: radial-gradient(ellipse at top, var(--wine-800) 0%, var(--wine-950) 65%);
+  --gradient-peach: linear-gradient(135deg, var(--peach) 0%, oklch(0.78 0.11 30) 100%);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Wine / burgundy scale */
+  --wine-950: oklch(0.22 0.06 15);
+  --wine-900: oklch(0.28 0.075 14);
+  --wine-800: oklch(0.34 0.085 15);
+  --wine-700: oklch(0.42 0.10 18);
+
+  --peach: oklch(0.86 0.09 55);          /* headline apricot */
+  --peach-soft: oklch(0.92 0.06 60);     /* muted peach */
+  --cream: oklch(0.94 0.03 65);          /* body text on dark */
+  --gilt: oklch(0.78 0.11 75);           /* gold accent */
+
+  /* Semantic tokens — DARK first (brand default) */
+  --background: var(--wine-950);
+  --foreground: var(--cream);
+  --card: var(--wine-900);
+  --card-foreground: var(--cream);
+  --popover: var(--wine-900);
+  --popover-foreground: var(--cream);
+  --primary: var(--peach);
+  --primary-foreground: var(--wine-950);
+  --secondary: var(--wine-800);
+  --secondary-foreground: var(--cream);
+  --muted: var(--wine-800);
+  --muted-foreground: oklch(0.78 0.04 45);
+  --accent: var(--peach-soft);
+  --accent-foreground: var(--wine-950);
+  --destructive: oklch(0.60 0.20 25);
+  --destructive-foreground: var(--cream);
+  --border: color-mix(in oklab, var(--peach) 18%, transparent);
+  --input: color-mix(in oklab, var(--peach) 22%, transparent);
+  --ring: var(--peach);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--gradient-wine);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--peach);
+  }
+  ::selection { background: var(--peach); color: var(--wine-950); }
+}
+
+/* --- Utilities --- */
+@utility text-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--peach) 12%, transparent), transparent 55%),
+      radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--wine-700) 40%, transparent), transparent 60%);
+    mix-blend-mode: screen;
+    opacity: 0.5;
+  }
+}
+@utility glass {
+  background: color-mix(in oklab, var(--wine-900) 60%, transparent);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border: 1px solid color-mix(in oklab, var(--peach) 15%, transparent);
+}
+@utility divider-gilt {
+  height: 1px;
+  background: linear-gradient(to right, transparent, color-mix(in oklab, var(--gilt) 60%, transparent), transparent);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-14px) rotate(2deg); }
+}
+@utility animate-float {
+  animation: float-slow 8s ease-in-out infinite;
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@utility animate-fade-up {
+  animation: fade-up 0.9s ease-out both;
+}

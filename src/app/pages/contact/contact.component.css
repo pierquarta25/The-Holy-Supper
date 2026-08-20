@@ -1,0 +1,18 @@
+.form-input, .form-select {
+  @apply w-full bg-wine-950 border border-peach/20 rounded-xl px-4 py-3 text-cream text-base transition-colors;
+}
+
+.form-input:focus, .form-select:focus {
+  @apply outline-none border-peach/50 ring-1 ring-peach/50;
+}
+
+.form-input::placeholder {
+  @apply text-cream/30;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f0ece8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}

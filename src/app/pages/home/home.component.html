@@ -1,0 +1,565 @@
+<main class="grain">
+<section class="relative overflow-hidden pt-40 pb-24 sm:pt-48 sm:pb-32">
+<div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-60" style="background:radial-gradient(ellipse 60% 40% at 70% 30%, color-mix(in oklab, var(--peach) 22%, transparent), transparent 60%)">
+</div>
+<div class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-12">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 text-xs uppercase tracking-widest text-peach-soft">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-3.5 w-3.5" aria-hidden="true">
+<path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+</path>
+<path d="M20 2v4">
+</path>
+<path d="M22 4h-4">
+</path>
+<circle cx="4" cy="20" r="2">
+</circle>
+</svg>{{ t.heroEyebrow }}</div>
+<h1 class="text-display mt-6 text-5xl leading-[1.05] sm:text-6xl md:text-7xl">{{ t.heroTitle }}</h1>
+<p class="mt-6 max-w-xl text-lg text-cream/80">{{ t.heroSub }}</p>
+<div class="mt-10 flex flex-wrap gap-4">
+<a [routerLink]="['/', locale, 'contact']" class="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition hover:brightness-110">{{ t.heroCta }}<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="m12 5 7 7-7 7">
+</path>
+</svg>
+</a>
+</div>
+<dl class="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-border/60 pt-8">
+<div>
+<dt class="text-xs uppercase tracking-widest text-cream/50">{{ t.heroStat1Label }}</dt>
+<dd class="text-display mt-1 text-xl text-peach">{{ t.heroStat1Value }}</dd>
+</div>
+<div>
+<dt class="text-xs uppercase tracking-widest text-cream/50">{{ t.heroStat2Label }}</dt>
+<dd class="text-display mt-1 text-xl text-peach">{{ t.heroStat2Value }}</dd>
+</div>
+<div>
+<dt class="text-xs uppercase tracking-widest text-cream/50">{{ t.heroStat3Label }}</dt>
+<dd class="text-display mt-1 text-xl text-peach">{{ t.heroStat3Value }}</dd>
+</div>
+</dl>
+</div>
+<div class="relative lg:col-span-5">
+<div class="relative mx-auto aspect-square max-w-md">
+<div aria-hidden="true" class="absolute inset-6 rounded-full" style="background:radial-gradient(circle, color-mix(in oklab, var(--peach) 30%, transparent) 0%, transparent 70%);filter:blur(30px)">
+</div>
+<img src="https://theholysupper.lovable.app/__l5e/assets-v1/7f5f7579-bd27-4aac-a4fa-8a45a89b7228/communion-cup-hero.png" alt="Pre-filled communion cup with sealed foil lid, wafer and grape juice" width="800" height="800" loading="eager" fetchPriority="high" class="animate-float relative z-10 h-full w-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,0.6)]"/>
+</div>
+</div>
+</div>
+<a href="#why" aria-label="Scroll" class="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 text-cream/50 transition hover:text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 animate-bounce" aria-hidden="true">
+<path d="m6 9 6 6 6-6">
+</path>
+</svg>
+</a>
+</section>
+<section class="border-y border-border/50 bg-card/30 py-10">
+<div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-6 text-cream/70">
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-primary" aria-hidden="true">
+<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+</path>
+<circle cx="12" cy="10" r="3">
+</circle>
+</svg>
+<span>{{ t.heroStat1Label }}</span>
+</div>
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck h-4 w-4 text-primary" aria-hidden="true">
+<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2">
+</path>
+<path d="M15 18H9">
+</path>
+<path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14">
+</path>
+<circle cx="17" cy="18" r="2">
+</circle>
+<circle cx="7" cy="18" r="2">
+</circle>
+</svg>
+<span>{{ t.trust[1] }}</span>
+</div>
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-4 w-4 text-primary" aria-hidden="true">
+<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+</path>
+<path d="m9 12 2 2 4-4">
+</path>
+</svg>
+<span>Sicurezza alimentare</span>
+</div>
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-check h-4 w-4 text-primary" aria-hidden="true">
+<path d="m16 16 2 2 4-4">
+</path>
+<path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14">
+</path>
+<path d="m7.5 4.27 9 5.15">
+</path>
+<polyline points="3.29 7 12 12 20.71 7">
+</polyline>
+<line x1="12" x2="12" y1="22" y2="12">
+</line>
+</svg>
+<span>Imballaggio protetto</span>
+</div>
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake h-4 w-4 text-primary" aria-hidden="true">
+<path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762">
+</path>
+</svg>
+<span>{{ t.trust[2] }}</span>
+</div>
+<div class="inline-flex items-center gap-2 text-sm">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check h-4 w-4 text-primary" aria-hidden="true">
+<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+</path>
+<path d="m9 12 2 2 4-4">
+</path>
+</svg>
+<span>{{ t.trust[3] }}</span>
+</div>
+</div>
+</section>
+<section id="why" class="relative py-32">
+<div class="mx-auto max-w-7xl px-6">
+<div class="max-w-2xl">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">Perché è importante</p>
+<h2 class="text-display mt-4 text-4xl sm:text-5xl">{{ t.whyTitle }}</h2>
+<p class="mt-6 text-cream/70">{{ t.whyIntro }}</p>
+</div>
+<div class="mt-16 grid gap-12 lg:grid-cols-2">
+<div class="rounded-3xl border border-border/60 bg-card/40 p-8">
+<h3 class="text-display text-2xl text-cream">{{ t.whyProblemsTitle }}</h3>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start gap-3 text-cream/75">
+<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-destructive">
+</span>
+<div>
+<p class="font-medium text-cream">Molti volontari</p>
+<p class="mt-1 text-sm text-cream/65">Preparazione, distribuzione e pulizia sottraggono persone al culto.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 text-cream/75">
+<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-destructive">
+</span>
+<div>
+<p class="font-medium text-cream">Flusso interrotto</p>
+<p class="mt-1 text-sm text-cream/65">Vassoi, bicchierini e fila creano pause che spezzano l'atmosfera.</p>
+</div>
+</li>
+<li class="flex items-start gap-3 text-cream/75">
+<span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-destructive">
+</span>
+<div>
+<p class="font-medium text-cream">Rumore e distrazioni</p>
+<p class="mt-1 text-sm text-cream/65">{{ t.problems[0].d }}</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="rounded-3xl border border-primary/20 p-8" style="background:linear-gradient(160deg, color-mix(in oklab, var(--peach) 12%, transparent), transparent)">
+<p class="text-xs uppercase tracking-widest text-peach">The Holy Supper</p>
+<h3 class="text-display mt-3 text-2xl text-peach">{{ t.solution.title }}</h3>
+<p class="mt-6 text-cream/80">{{ t.solution.body }}</p>
+</div>
+</div>
+</div>
+</section>
+<section id="benefits" class="relative py-32">
+<div class="mx-auto max-w-7xl px-6">
+<div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+<div class="max-w-2xl">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.benefitsEyebrow }}</p>
+<h2 class="text-display mt-4 text-4xl sm:text-5xl">{{ t.benefitsTitle }}</h2>
+</div>
+<p class="max-w-sm text-cream/70">{{ t.benefitsSub }}</p>
+</div>
+<div class="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<div *ngFor="let b of t.benefits; let i = index" class="group relative overflow-hidden rounded-3xl border border-border/60 bg-card/40 p-8 transition hover:border-primary/50">
+<span class="relative inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+<lucide-icon [img]="benefitsIcons[i] || icons.CheckCircle" class="h-5 w-5"></lucide-icon>
+</span>
+<h3 class="text-display relative mt-6 text-xl text-cream">{{ b.t }}</h3>
+<p class="relative mt-2 text-sm text-cream/70">{{ b.d }}</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pricing" class="relative py-32">
+<div class="mx-auto max-w-6xl px-6">
+<div class="text-center">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">Prezzi indicativi</p>
+<h2 class="text-display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">{{ t.pricingTitle }}</h2>
+<p class="mx-auto mt-5 max-w-xl text-cream/70">{{ t.pricingSub }}</p>
+</div>
+<div class="mt-14 overflow-hidden rounded-3xl border border-border/60">
+<div class="grid grid-cols-4 gap-0 border-b border-border/60 bg-card/40 px-6 py-4 text-xs uppercase tracking-widest text-cream/50 sm:px-8">
+<div>Quantità</div>
+<div>{{ t.pricingHeaderMarket }}</div>
+<div>{{ t.pricingHeaderOurs }}</div>
+<div class="text-right">Risparmi</div>
+</div>
+<div class="grid grid-cols-4 items-center gap-0 border-b border-border/40 px-6 py-6 last:border-0 sm:px-8 ">
+<div>
+<div class="text-display text-lg text-cream">100</div>
+<div class="mt-0.5 text-xs text-cream/50">€0.32</div>
+</div>
+<div class="text-cream/60 line-through">€42</div>
+<div class="text-display text-2xl text-peach">€32</div>
+<div class="text-right">
+<span class="inline-flex rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">€10</span>
+</div>
+</div>
+<div class="grid grid-cols-4 items-center gap-0 border-b border-border/40 px-6 py-6 last:border-0 sm:px-8 ">
+<div>
+<div class="text-display text-lg text-cream">250</div>
+<div class="mt-0.5 text-xs text-cream/50">€0.24</div>
+</div>
+<div class="text-cream/60 line-through">€81</div>
+<div class="text-display text-2xl text-peach">€60</div>
+<div class="text-right">
+<span class="inline-flex rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">€21</span>
+</div>
+</div>
+<div class="grid grid-cols-4 items-center gap-0 border-b border-border/40 px-6 py-6 last:border-0 sm:px-8 ">
+<div>
+<div class="text-display text-lg text-cream">500</div>
+<div class="mt-0.5 text-xs text-cream/50">€0.23</div>
+</div>
+<div class="text-cream/60 line-through">€158</div>
+<div class="text-display text-2xl text-peach">€115</div>
+<div class="text-right">
+<span class="inline-flex rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">€43</span>
+</div>
+</div>
+<div class="grid grid-cols-4 items-center gap-0 border-b border-border/40 px-6 py-6 last:border-0 sm:px-8 bg-primary/5">
+<div>
+<div class="text-display text-lg text-cream">1000</div>
+<div class="mt-0.5 text-xs text-cream/50">€0.21</div>
+</div>
+<div class="text-cream/60 line-through">€289</div>
+<div class="text-display text-2xl text-peach">€219</div>
+<div class="text-right">
+<span class="inline-flex rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">€70</span>
+</div>
+</div>
+</div>
+<p class="mt-6 text-center text-xs text-cream/50">{{ t.pricingDisclaimer }}</p>
+<div class="mt-10 text-center">
+<a [routerLink]="['/', locale, 'contact']" class="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition hover:brightness-110">{{ t.pricingCta }}<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true">
+<path d="M5 12h14">
+</path>
+<path d="m12 5 7 7-7 7">
+</path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<section id="impact" class="relative py-32">
+<div class="mx-auto max-w-6xl px-6">
+<div class="mx-auto max-w-3xl text-center">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.impactEyebrow }}</p>
+<h2 class="text-display mt-4 text-4xl sm:text-5xl leading-[1.05]">{{ t.impactTitle }}</h2>
+<p class="mt-6 text-lg text-cream/75">{{ t.impactSubhead }}</p>
+</div>
+<div class="mt-16 grid gap-6 md:grid-cols-2">
+<div class="relative overflow-hidden rounded-3xl border border-border/60 bg-card/40 p-8">
+<span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-church h-5 w-5" aria-hidden="true">
+<path d="M10 9h4">
+</path>
+<path d="M12 7v5">
+</path>
+<path d="M14 21v-3a2 2 0 0 0-4 0v3">
+</path>
+<path d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9">
+</path>
+<path d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14">
+</path>
+</svg>
+</span>
+<p class="mt-6 text-xs uppercase tracking-widest text-peach-soft">01 — Today</p>
+<h3 class="text-display mt-2 text-2xl text-cream">Communion for every church</h3>
+<p class="mt-4 text-cream/75">{{ t.impactBody }}</p>
+</div>
+<div class="relative overflow-hidden rounded-3xl border border-primary/25 p-8" style="background:linear-gradient(160deg, color-mix(in oklab, var(--peach) 12%, transparent), transparent)">
+<span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-5 w-5" aria-hidden="true">
+<path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+</path>
+<path d="M20 2v4">
+</path>
+<path d="M22 4h-4">
+</path>
+<circle cx="4" cy="20" r="2">
+</circle>
+</svg>
+</span>
+<p class="mt-6 text-xs uppercase tracking-widest text-peach">02 — Tomorrow</p>
+<h3 class="text-display mt-2 text-2xl text-peach">{{ t.impactCaption }}</h3>
+<p class="mt-4 text-cream/80">As The Holy Supper grows, our desire is for every purchase to become part of something bigger — supporting Christian mission and humanitarian initiatives around the world.</p>
+</div>
+</div>
+<div class="mt-10">
+<p class="text-center text-xs uppercase tracking-[0.3em] text-cream/50">{{ t.impactClosing }}</p>
+<div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+<div class="group rounded-2xl border border-border/60 bg-card/30 p-6 transition hover:border-primary/40">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-church h-4 w-4" aria-hidden="true">
+<path d="M10 9h4">
+</path>
+<path d="M12 7v5">
+</path>
+<path d="M14 21v-3a2 2 0 0 0-4 0v3">
+</path>
+<path d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9">
+</path>
+<path d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Chiese locali</p>
+<p class="mt-1 text-xs text-cream/60">{{ t.impactPillars[0].d }}</p>
+</div>
+<div class="group rounded-2xl border border-border/60 bg-card/30 p-6 transition hover:border-primary/40">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake h-4 w-4" aria-hidden="true">
+<path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Comunità vulnerabili</p>
+<p class="mt-1 text-xs text-cream/60">{{ t.impactPillars[1].d }}</p>
+</div>
+<div class="group rounded-2xl border border-border/60 bg-card/30 p-6 transition hover:border-primary/40">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-school h-4 w-4" aria-hidden="true">
+<path d="M14 21v-3a2 2 0 0 0-4 0v3">
+</path>
+<path d="M18 5v16">
+</path>
+<path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6">
+</path>
+<path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11">
+</path>
+<path d="M6 5v16">
+</path>
+<circle cx="12" cy="9" r="2">
+</circle>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Educazione dei bambini</p>
+<p class="mt-1 text-xs text-cream/60">{{ t.impactPillars[2].d }}</p>
+</div>
+<div class="group rounded-2xl border border-border/60 bg-card/30 p-6 transition hover:border-primary/40">
+<span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets h-4 w-4" aria-hidden="true">
+<path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z">
+</path>
+<path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Acqua pulita</p>
+<p class="mt-1 text-xs text-cream/60">{{ t.impactPillars[3].d }}</p>
+</div>
+</div>
+<p class="mt-6 text-center text-xs italic text-cream/55">Aspirational — these are the causes we hope to support as the company develops, not projects we currently fund.</p>
+</div>
+<div class="mt-14 relative overflow-hidden rounded-[2rem] border border-border/60 p-10 sm:p-14">
+<div aria-hidden="true" class="absolute inset-0" style="background:radial-gradient(ellipse at 20% 30%, color-mix(in oklab, var(--peach) 18%, transparent), transparent 65%)">
+</div>
+<div class="relative grid items-center gap-10 md:grid-cols-5">
+<div class="md:col-span-2">
+<svg viewBox="0 0 200 200" class="mx-auto h-auto w-full max-w-[220px]" aria-hidden="true">
+<defs>
+<radialGradient id="globe" cx="35%" cy="35%" r="70%">
+<stop offset="0%" stop-color="var(--peach)" stop-opacity="0.35">
+</stop>
+<stop offset="100%" stop-color="var(--wine-700)" stop-opacity="0.15">
+</stop>
+</radialGradient>
+</defs>
+<circle cx="100" cy="100" r="80" fill="url(#globe)" stroke="color-mix(in oklab, var(--peach) 35%, transparent)" stroke-width="1">
+</circle>
+<ellipse cx="100" cy="100" rx="80" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="58" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="36" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="14" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="6" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="6" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="6" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="80" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="55" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="30" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="6" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="6" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<ellipse cx="100" cy="100" rx="6" ry="80" fill="none" stroke="color-mix(in oklab, var(--peach) 22%, transparent)" stroke-width="0.6">
+</ellipse>
+<circle cx="122" cy="96" r="4" fill="var(--peach)">
+</circle>
+<circle cx="122" cy="96" r="10" fill="var(--peach)" opacity="0.25">
+</circle>
+</svg>
+</div>
+<div class="md:col-span-3">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">Where the vision was born</p>
+<p class="mt-4 text-cream/80 leading-relaxed">{{ t.impactFooter1 }}</p>
+</div>
+</div>
+</div>
+<p class="mt-14 mx-auto max-w-3xl text-center text-lg italic text-cream/75">{{ t.impactFooter2 }}</p>
+</div>
+</section>
+<section id="how" class="relative py-32">
+<div class="mx-auto max-w-7xl px-6">
+<div class="max-w-2xl">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.howEyebrow }}</p>
+<h2 class="text-display mt-4 text-4xl sm:text-5xl">{{ t.howTitle }}</h2>
+</div>
+<ol class="mt-16 grid gap-6 md:grid-cols-4">
+<li class="relative rounded-3xl border border-border/60 bg-card/40 p-7">
+<span class="text-display text-6xl leading-none text-primary/25">01</span>
+<span class="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list h-4 w-4" aria-hidden="true">
+<rect width="8" height="4" x="8" y="2" rx="1" ry="1">
+</rect>
+<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+</path>
+<path d="M12 11h4">
+</path>
+<path d="M12 16h4">
+</path>
+<path d="M8 11h.01">
+</path>
+<path d="M8 16h.01">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">{{ t.howSteps[0].t }}</p>
+<p class="mt-1 text-sm text-cream/65">Raccontaci della tua chiesa.</p>
+</li>
+<li class="relative rounded-3xl border border-border/60 bg-card/40 p-7">
+<span class="text-display text-6xl leading-none text-primary/25">02</span>
+<span class="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send h-4 w-4" aria-hidden="true">
+<path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+</path>
+<path d="m21.854 2.147-10.94 10.939">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">{{ t.howSteps[1].t }}</p>
+<p class="mt-1 text-sm text-cream/65">{{ t.howSteps[1].d }}</p>
+</li>
+<li class="relative rounded-3xl border border-border/60 bg-card/40 p-7">
+<span class="text-display text-6xl leading-none text-primary/25">03</span>
+<span class="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory h-4 w-4" aria-hidden="true">
+<path d="M12 16h.01">
+</path>
+<path d="M16 16h.01">
+</path>
+<path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z">
+</path>
+<path d="M8 16h.01">
+</path>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Produzione</p>
+<p class="mt-1 text-sm text-cream/65">{{ t.howSteps[2].d }}</p>
+</li>
+<li class="relative rounded-3xl border border-border/60 bg-card/40 p-7">
+<span class="text-display text-6xl leading-none text-primary/25">04</span>
+<span class="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck h-4 w-4" aria-hidden="true">
+<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2">
+</path>
+<path d="M15 18H9">
+</path>
+<path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14">
+</path>
+<circle cx="17" cy="18" r="2">
+</circle>
+<circle cx="7" cy="18" r="2">
+</circle>
+</svg>
+</span>
+<p class="text-display mt-4 text-lg text-cream">Consegna</p>
+<p class="mt-1 text-sm text-cream/65">{{ t.howSteps[3].d }}</p>
+</li>
+</ol>
+</div>
+</section>
+<section id="faq" class="relative py-32">
+<div class="mx-auto max-w-4xl px-6">
+<div class="text-center">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.faqEyebrow }}</p>
+<h2 class="text-display mt-4 text-4xl sm:text-5xl">{{ t.faqTitle }}</h2>
+</div>
+<div class="mt-8 flex flex-col">
+  @for (faq of faqs; track $index) {
+    <div class="border-b border-border/60">
+      <h3 class="flex m-0">
+        <button 
+          type="button" 
+          (click)="toggleFaq($index)"
+          [attr.aria-expanded]="openFaqIndex === $index"
+          class="flex w-full flex-1 items-center justify-between py-4 text-left text-base font-medium text-cream cursor-pointer transition-all hover:text-primary outline-none focus-visible:ring-1 focus-visible:ring-primary/50"
+        >
+          <span>{{ faq.q }}</span>
+          <lucide-icon [img]="icons.ChevronDown" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" [class.rotate-180]="openFaqIndex === $index"></lucide-icon>
+        </button>
+      </h3>
+      <div 
+        class="grid transition-all duration-300 ease-in-out"
+        [ngStyle]="{'grid-template-rows': openFaqIndex === $index ? '1fr' : '0fr'}"
+      >
+        <div class="overflow-hidden">
+          <div 
+            class="pb-4 pt-0 text-sm text-cream/70 whitespace-pre-line m-0 transition-opacity duration-300"
+            [class.opacity-0]="openFaqIndex !== $index"
+            [class.opacity-100]="openFaqIndex === $index"
+          >
+            {{ faq.a }}
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+</div>
+</section>
+<section class="relative py-32">
+<div class="mx-auto max-w-5xl px-6">
+<div class="relative overflow-hidden rounded-[2rem] border border-primary/25 p-12 text-center sm:p-16">
+<div aria-hidden="true" class="absolute inset-0" style="background:radial-gradient(ellipse at center, color-mix(in oklab, var(--peach) 22%, transparent), transparent 70%)">
+</div>
+<div class="relative">
+<p class="text-xs uppercase tracking-[0.3em] text-peach-soft">{{ t.finalCtaEyebrow }}</p>
+<h2 class="text-display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">{{ t.finalCtaTitle }}</h2>
+<div class="mt-10 flex flex-wrap justify-center gap-3">
+<a [routerLink]="['/', locale, 'contact']" class="rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition hover:brightness-110">{{ t.heroCta }}</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
