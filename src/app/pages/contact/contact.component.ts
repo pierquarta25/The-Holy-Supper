@@ -6,7 +6,7 @@ import { SupabaseService } from '../../services/supabase.service';
 import { I18nService } from '../../i18n/i18n.service';
 
 /* 
- * Pagina di Contatto collegata a Supabase per l'invio delle richieste.
+ * Pagina di Contatto collegata a Supabase per l'invio delle richieste con gestione feedback d'errore.
  */
 @Component({
   selector: 'app-contact',
@@ -70,17 +70,18 @@ export class ContactComponent {
 
         if (error) {
           console.error('Supabase error:', error);
-          this.errorMessage = this.t.errors.generic;
+          this.errorMessage = this.t.errors.generic || 'Si è verificato un errore durante l\'invio. Riprova.';
         } else {
           this.isSuccess = true;
         }
       } catch (err) {
         this.isSubmitting = false;
-        this.errorMessage = this.t.errors.generic;
+        this.errorMessage = this.t.errors.generic || 'Si è verificato un errore durante l\'invio.';
         console.error('Submission error:', err);
       }
     } else {
       this.contactForm.markAllAsTouched();
+      this.errorMessage = 'Compila tutti i campi obbligatori evidenziati in rosso (Nome chiesa, Paese, Nome, Cognome ed Email valida).';
     }
   }
 }
